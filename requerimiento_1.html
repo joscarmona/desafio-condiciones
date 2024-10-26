@@ -22,13 +22,15 @@
         <p>Para agregar o eliminar el borde de la imagen que se muestra debajo, por favor haga clic sobre la misma. <br> <span class="span-h1">&#x21D3</span></p>
 
         <img src="./assets/image/image.webp" alt="auto en el campo" class="imagen" onclick="
-        //Primero se chequea si la imagen tiene borde, si no tiene se ingresa al if y se le agrega border
-        if (document.querySelector('img').style.border === ''){
-            document.querySelector('img').style.border = '2px solid red'
+        //Selección del elemento img para poder manipular
+        imagen = document.querySelector('img')
+        //Primero se chequea si la imagen tiene borde, si no tiene borde no se ingresa al if y se ejecuta el bloque del else, agregando borde a la imagen
+        if (imagen.style.border){
+            imagen.style.border = ''
         }
         //Caso contrario, se elimina el border
         else{
-            document.querySelector('img').style.border = ''
+            imagen.style.border = '2px solid red'
         }
         ">
     </section>
