@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2 - Condiciones: requerimiento 1</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/css/style_1.css">
+
+    <!-- Tipografía utilizada en la página desde Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <section class="flexbox">
+        <h1>Desafío 2 - Condiciones: requerimiento 1</h1>
+
+        <p>Para agregar o eliminar el borde de la imagen que se muestra debajo, por favor haga clic sobre la misma. <br> <span class="span-h1">&#x21D3</span></p>
+
+        <img src="./assets/image/image.webp" alt="auto en el campo" class="imagen" onclick="
+        //Primero se chequea si la imagen tiene borde, si no tiene se ingresa al if y se le agrega border
+        if (document.querySelector('img').style.border === ''){
+            document.querySelector('img').style.border = '2px solid red'
+        }
+        //Caso contrario, se elimina el border
+        else{
+            document.querySelector('img').style.border = ''
+        }
+        ">
+    </section>
+    
+    
+</body>
+</html>
