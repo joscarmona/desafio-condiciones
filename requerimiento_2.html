@@ -1,0 +1,89 @@
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ----------------------------- INTRODUCCIÓN A JAVASCRIPT ----------------------------- -->
+<!-- ------------------------------ Desafío 2 - Condiciones ------------------------------ -->
+<!-- ---------------------------------- Requerimiento 2 ---------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2 - Condiciones: requerimiento 1</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/css/style_2.css">
+
+    <!-- Tipografía utilizada en la página desde Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Container Section -->
+    <section class="flexbox">
+        <h1>Desafío 2 - Condiciones: requerimiento 2</h1>
+
+        <!-- Enunciado -->
+        <p class="enunciado-parrafo">Ingrese por favor la cantidad de cada stickers que desea llevar. <br>Considere que solo puede llevar hasta un máximo de <b>10 STICKERS EN TOTAL</b>. Al finalizar presione el botón (Verificar) para chequear si lleva la cantidad de stickers permitida</p>
+
+        <!-- Stickers Cards -->
+        <div class="flexbox-stickers">
+            <!-- Card 1 -->
+            <article class="sticker-card">
+                <!-- Sticker 1 -->
+                <img src="./assets/image/sticker_1.webp" alt="calabaza halloween" class="sticker">
+                <!-- Sticker 1 Input -->
+                <input type="text" id="sticker1-input" class="sticker-input">
+            </article>
+            <!-- Card 2 -->
+            <article class="sticker-card">
+                <!-- Sticker 2 -->
+                <img src="./assets/image/sticker_2.webp" alt="monstruo halloween" class="sticker">
+                <!-- Sticker 2 Input -->
+                <input type="text" id="sticker2-input" class="sticker-input">
+            </article>
+            <!-- Card 3 -->
+            <article class="sticker-card">
+                <!-- Sticker 3 -->
+                <img src="./assets/image/sticker_3.webp" alt="calabaza halloween" class="sticker">
+                <!-- Sticker 3 Input -->
+                <input type="text" id="sticker3-input" class="sticker-input">
+            </article>           
+        </div>
+
+        <!-- Visualiza mensaje de la cantidad de stickers a llevar por el usuario -->
+        <p id="msj-cantidad-stickers"></p>
+
+        <!-- Validación de la cantidad de stickers a llevar por el usuario -->
+        <button onclick="
+
+            // Selección de los elementos input para registrar las cantidades por cada stickers
+            sticker_1Input = Number(document.querySelector('#sticker1-input').value)
+            sticker_2Input = Number(document.querySelector('#sticker2-input').value)
+            sticker_3Input = Number(document.querySelector('#sticker3-input').value)
+
+            // Cálculo de la cantidad total de stickers que desea llevar el usuario
+            stickers_total = sticker_1Input + sticker_2Input + sticker_3Input
+
+            // Validación de la cantidad total de stickers que puede llevar un usuario
+            //Ejecuta el bloque del if cuando la cantidad total de stickers es menor y igual que 10, de lo contratrio ejecuta el bloque del else
+            if (stickers_total <= 10){
+                msjCantidadStickers.innerHTML = 'Llevas un total de ' + stickers_total + ' stickers'
+                msjCantidadStickers.style.backgroundColor = '#3f51b5'
+            }
+            else{
+                msjCantidadStickers.innerHTML = 'Llevas demasiados stickers'
+                msjCantidadStickers.style.backgroundColor = '#3f51b5'
+            }
+
+        ">Verificar</button>
+
+    </section>
+
+    <!-- Script file -->
+    <script src="./assets/js/script_2.js"></script>
+    
+</body>
+</html>
