@@ -79,10 +79,10 @@ h1{
 
 /* BUTTON */
 button{
-    background-color: #3f51b5;
+    background-color: #67189c;
     color: rgb(183, 244, 253);
     font-size: large;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
     width: 100px;
     height: 30px;

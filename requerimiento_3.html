@@ -1,0 +1,116 @@
+<!-- ------------------------------------------------------------------------------------- -->
+<!-- ----------------------------- INTRODUCCIÓN A JAVASCRIPT ----------------------------- -->
+<!-- ------------------------------ Desafío 2 - Condiciones ------------------------------ -->
+<!-- ---------------------------------- Requerimiento 3 ---------------------------------- -->
+<!-- ------------------------------------------------------------------------------------- -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2 - Condiciones: requerimiento 2</title>
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="./assets/css/style_3.css">
+
+    <!-- Tipografía utilizada en la página desde Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+ </head>
+ <body>
+
+    <!-- Container Section -->
+    <section class="flexbox">
+
+        <!-- Encabezado H1 -->
+        <h1>Desafío 2 - Condiciones: requerimiento 3</h1>
+
+        <!-- Bloque para ingresar el password, container -->
+        <div class="password-block-container">
+
+            <!-- Encabezado H3 -->
+            <h3>Ingrese el password</h3>
+
+            <!-- Select -->
+            <article>
+                <!-- Select 1 -->
+                <select name="" id="select-1" class="select">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <!-- Select 2 -->
+                <select name="" id="select-2" class="select">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <!-- Select 3 -->
+                <select name="" id="select-3" class="select">
+                    <option value=""></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </article>
+
+            <!-- Valida password ingresado por el usuario -->
+            <button onclick="
+
+                // Registro de los valores seleccionados en cada uno de los elementos select para la posterior conformación del password que estaría ingresando el usuario
+                select_1 = document.querySelector('#select-1').value
+                select_2 = document.querySelector('#select-2').value
+                select_3 = document.querySelector('#select-3').value
+
+                //Conformación del password ingresado por el usuario
+                password = select_1 + select_2 + select_3
+
+                // Validación del password que ingresa el usuario
+                if (password === '911'){
+                    msjValidaPassword.innerHTML = 'password 1 correcto'
+                    msjValidaPassword.style.backgroundColor = '#3f51b5'
+                }
+                else if (password === '714'){
+                    msjValidaPassword.innerHTML = 'password 2 correcto'
+                    msjValidaPassword.style.backgroundColor = '#3f51b5'
+                }
+                else{
+                    msjValidaPassword.innerHTML = 'password incorrecto'
+                    msjValidaPassword.style.backgroundColor = '#3f51b5'
+                }
+
+            ">Ingresar</button>
+
+            <!-- Visualiza mensaje si es correcto o no el password que ingresa el usuario -->
+            <p id="msj-valida-password"></p>
+
+        </div>
+
+    </section>
+
+    <script src="./assets/js/script_3.js"></script>
+    
+ </body>
+ </html>
